@@ -1,11 +1,11 @@
 # DATASCI 209 flask template
 
-This repo provides a basic flask app for DATASCI 209 students and instructors. You can run this flask app locally for development/debugging, or deploy it to Digital Ocean's [App Platform](https://www.digitalocean.com/products/app-platform).
+This repo provides a basic flask app for DATASCI 209 students and instructors. You can run this flask app locally for development/debugging or deploy it to Digital Ocean's [App Platform](https://www.digitalocean.com/products/app-platform).
 
 ## Getting Started
 
 1. Install Python 3.x on your computer.
-2. [Create a copy](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) of this repo.
+2. [Create a copy](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) of this repo.
 3. Clone your copy of this repo to your computer.
 4. Create a [Python virtual environment](https://realpython.com/python-virtual-environments-a-primer/) to run your flask app (Optional).
 
@@ -13,7 +13,7 @@ This repo provides a basic flask app for DATASCI 209 students and instructors. Y
 
 **Install dependencies**
 
-On a Mac, open a terminal and run the following command to install the necessary Python libraries.  See the [pip documentation](https://pip.pypa.io/en/stable/cli/pip_install/) if you need more information, or if you run Python on Windows.
+On a Mac, open a terminal and run the following command to install the necessary Python libraries.  See the [pip documentation](https://pip.pypa.io/en/stable/cli/pip_install/) if you need more information or if you run Python on Windows.
 
 ```
 pip3 install -r requirements.txt
@@ -29,7 +29,7 @@ flask --app app.py --debug run
 
 **Point your browser to http://127.0.0.1:5000**
 
-## Digital Ocean
+## Hosting your flask app on Digital Ocean
 
 Digital Ocean provides a public cloud platform that you can use to host your flask app.  See [How To Deploy a Flask App Using Gunicorn to App Platform](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-app-using-gunicorn-to-app-platform) for an overview of how their flask app hosting works.
 
@@ -41,4 +41,5 @@ This repo already has the necessary configuration files to build and launch a fl
 Please note the following:
 
 1. Digital Ocean does not offer free App Platform hosting.  The smallest App Platform VM costs $5 per month as of October 2024.
-2. Automatically deploying your code changes to App Platform requires installing the Digital Ocean GitHub app.  It's easier to set up this app in your personal GitHub workspace than in a GitHub organization owned by someone else.  For this reason, we recommend that you keep your flask app repo in your personal GitHub workspace.
+2. DATASCI 209 students and instructors may be eligible for a free higher education credit from Digital Ocean.  See Digital Ocean's [higher education](https://www.digitalocean.com/landing/do-for-higher-education) page for more information.
+3. Automatically deploying your code changes to App Platform requires installing the Digital Ocean GitHub app.  It's easier to set up this app in your personal GitHub workspace than in a GitHub organization owned by someone else.  For this reason, we recommend that you keep your flask app repo in your personal GitHub workspace.
