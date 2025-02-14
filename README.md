@@ -55,32 +55,40 @@ Digital Ocean provides a public cloud platform that you can use to host your fla
 **How to deploy your flask app to Digital Ocean**
 
 1. Create a [Digital Ocean](https://www.digitalocean.com) account.
+
 2. Navigate to the [App Platform Homepage](https://cloud.digitalocean.com/apps)
+
 3. Select 'Create App' using GitHub as the Source provider
   ![Digital Ocean Create App UI](images/01_create_app_ui.png)
+
 4. You will likely see that Digital Ocean doesn't detect any of your GitHub repos.  If so, select 'Edit your GitHub permissions'.
   ![Digital Ocean edit GitHub permissions](images/02_grant_github_access.png)
-6. You will be prompted to install and authorize the Digital ocean GitHup app.  For security, it's a good idea to only grant the Digital Ocean GitHub app access to your copy of the DATASCI 209 flask template repo.
+
+5. You will be prompted to install and authorize the Digital ocean GitHup app.  For security, it's a good idea to only grant the Digital Ocean GitHub app access to your copy of the DATASCI 209 flask template repo.
   ![Digital Ocean install GitHub app](images/03_install_github_app.png)
-7. After you grant the Digital Ocean GitHub app access to your repo, make sure it's tracking the main branch of your repo and that autodeploy is enabled.  This will automatically deploy any updates to the main branch of your repo to Digital Ocean's app platform.
+
+6. After you grant the Digital Ocean GitHub app access to your repo, make sure it's tracking the main branch of your repo and that autodeploy is enabled.  This will automatically deploy any updates to the main branch of your repo to Digital Ocean's app platform.
   ![Digital Ocean automatic deployment](images/04_auto_deploy.png)
-8. Next, you will need to edit your app settings.  In the example below, Digital Ocean has assigned the name 'lobster-app' to this flask application.  These names are randomly generated.  Your app may be called something different like 'lionfish-app' or 'jellyfish-app'
+
+7. Next, you will need to edit your app settings.  In the example below, Digital Ocean has assigned the name 'lobster-app' to this flask application.  These names are randomly generated.  Your app may be called something different like 'lionfish-app' or 'jellyfish-app'
   ![Digital Ocean app summary](images/05_edit_app.png)
-9. You will need to edit two app settings:
+
+8. You will need to edit two app settings:
   * **Resource Size**: The default resource size costs $12 per month. Change that to the smallest resource size, which costs $5 per month.  Unless your flask app is doing something resource intensive on the back end, the smallest Digital Ocean resource size should be fine.
   * **Run Command**: Replace the default run command with the following:
   ```
    gunicorn --worker-tmp-dir /dev/shm app:app
    ```
   ![Digital Ocean app settings](images/06_app_settings.png)
-10. After you save your app settings, you will see a summary screen for your app.  Verify that the monthly app cost is $5, then select 'Create Resources'
+
+9. After you save your app settings, you will see a summary screen for your app.  Verify that the monthly app cost is $5, then select 'Create Resources'
   ![Digital Ocean app summary](images/07_app_summary.png)
-11. After you click the Create Resources button, you will see a web page that displays the progress of your app's build and deployment process.  You can view the build and deploy logs if you need to troubleshoot a failed deployment
+
+10. After you click the Create Resources button, you will see a web page that displays the progress of your app's build and deployment process.  You can view the build and deploy logs if you need to troubleshoot a failed deployment
   ![Digital Ocean build screen ](images/08_build_and_deploy.png)
-12. After your deployment completes, select 'Live App' to view your flask app in a web browser.
+
+11. After your deployment completes, select 'Live App' to view your flask app in a web browser.
   ![Digital Ocean build screen ](images/09_deployed.png)
-13. Be sure to bookmark your flask app's URL so you can find it without using the Digital Ocean web UI.
+`
+12. Be sure to bookmark your flask app's URL so you can find it without using the Digital Ocean web UI.
 
-  
-
-  
