@@ -44,7 +44,7 @@ When running your app locally with the --debug flag, flask's built-in debugger w
 
 ## Hosting your flask app on Digital Ocean
 
-Digital Ocean provides a public cloud platform that you can use to host your flask app.  See [How To Deploy a Flask App Using Gunicorn to App Platform](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-app-using-gunicorn-to-app-platform) for an overview of how their flask app hosting works.
+Digital Ocean provides a public cloud platform that you can use to host your flask app.
 
 **Please note**
 
@@ -79,9 +79,11 @@ Digital Ocean provides a public cloud platform that you can use to host your fla
   ```
    gunicorn --worker-tmp-dir /dev/shm app:app
    ```
+
+  * After you make the changes to your app settings, use the 'Back' link to return  to the previous screen.
   ![Digital Ocean app settings](images/06_app_settings.png)
 
-9. After you save your app settings, you will see a summary screen for your app.  Verify that the monthly app cost is $5, then select 'Create Resources'
+9. Click on the 'Skip to Review' link.  You will see a summary screen for your app.  Verify that the monthly app cost is $5, then select 'Create Resources'
   ![Digital Ocean app summary](images/07_app_summary.png)
 
 10. After you click the Create Resources button, you will see a web page that displays the progress of your app's build and deployment process.  You can view the build and deploy logs if you need to troubleshoot a failed deployment
@@ -92,3 +94,7 @@ Digital Ocean provides a public cloud platform that you can use to host your fla
 `
 12. Be sure to bookmark your flask app's URL so you can find it without using the Digital Ocean web UI.
 
+13. if you need additional assistance deploying your flask app to DIgital Ocean's App Platform:
+
+  * See [How To Deploy a Flask App Using Gunicorn to App Platform](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-app-using-gunicorn-to-app-platform) for an overview of how their flask app hosting works.
+  * Point your browser at Digital Ocean's [Support page](https://cloud.digitalocean.com/account/support) and create a support request using the 'Create a ticket' link.
