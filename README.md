@@ -49,7 +49,7 @@ Digital Ocean provides a public cloud platform that you can use to host your fla
 **Please note**
 
 1. Digital Ocean does not offer free App Platform hosting.  The smallest App Platform VM costs $5 per month as of October 2024.
-2. DATASCI 209 students and instructors may be eligible for a free higher education credit from Digital Ocean.  See Digital Ocean's [GitHub Student Developer](https://www.digitalocean.com/github-students) page for more information.
+2. DATASCI 209 students may be eligible for a free higher education credit from Digital Ocean.  See Digital Ocean's [GitHub Student Developer](https://www.digitalocean.com/github-students) page for more information.
 3. Automatically deploying your code changes to App Platform requires installing the Digital Ocean GitHub app.  It's easier to set up this app in your personal GitHub workspace than in a GitHub organization owned by someone else.  For this reason, we recommend that you keep your flask app repo in your personal GitHub workspace.
 
 **How to deploy your flask app to Digital Ocean**
