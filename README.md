@@ -70,31 +70,34 @@ Digital Ocean provides a public cloud platform that you can use to host your fla
 6. After you grant the Digital Ocean GitHub app access to your repo, make sure it's tracking the main branch of your repo and that autodeploy is enabled.  This will automatically deploy any updates to the main branch of your repo to Digital Ocean's app platform.
   ![Digital Ocean automatic deployment](images/04_auto_deploy.png)
 
-7. Next, you will need to edit your app settings.  In the example below, Digital Ocean has assigned the name 'lobster-app' to this flask application.  These names are randomly generated.  Your app may be called something different like 'lionfish-app' or 'jellyfish-app'
-  ![Digital Ocean app summary](images/05_edit_app.png)
+7. After you set up access to your GitHub repo, Digital Ocean will display the 'Create an app' screen.  You will need to edit two resource settings before you launch your app:
+  * **Size**: The default VM size costs $24 per month, your flask app should run on the smallest VM which costs only $5 per month.
+  * **Deployment settings**: You will need to update the default 'Run command' setting.  
+  ![Digital Ocean app summary](images/05_create_app.png)
 
-8. You will need to edit two app settings:
-  * **Resource Size**: The default resource size costs $12 per month. Change that to the smallest resource size, which costs $5 per month.  Unless your flask app is doing something resource intensive on the back end, the smallest Digital Ocean resource size should be fine.
-  * **Run Command**: Replace the default run command with the following:
+8. Click on the edit button next to the 'Size' parameter and select the smallest instance size available. Unless your flask app is doing something resource intensive on the back end, the smallest Digital Ocean resource size should be fine.
+
+![Instance size detail pane](images/05a_edit_resource_size.png)
+
+9. Click on the edit button next to the 'Deployment settings' parameter and replace the default run command with the following:
   ```
    gunicorn --worker-tmp-dir /dev/shm app:app
    ```
+![Deployment settings detail pane](images/05b_edit_run_command.png)
 
-  * After you make the changes to your app settings, use the 'Back' link to return  to the previous screen.
-  ![Digital Ocean app settings](images/06_app_settings.png)
+10. Verify that your instance size is correct, your run command is correct and that the monthly charge is $5. If everything looks good, click the 'Create app' button.
+  ![Digital Ocean app summary](images/06_review_settings.png)
 
-9. Click on the 'Skip to Review' link.  You will see a summary screen for your app.  Verify that the monthly app cost is $5, then select 'Create Resources'
-  ![Digital Ocean app summary](images/07_app_summary.png)
+11. After you create your app, switch from the 'Overview' to the 'Activity' tab so you can track your app's build and deployment progress.  You can view the build and deploy logs from this tab if you need to troubleshoot a failed deployment
+  ![Digital Ocean activity logs ](images/07_build_deploy_logs.png)
 
-10. After you click the Create Resources button, you will see a web page that displays the progress of your app's build and deployment process.  You can view the build and deploy logs if you need to troubleshoot a failed deployment
-  ![Digital Ocean build screen ](images/08_build_and_deploy.png)
 
-11. After your deployment completes, select 'Live App' to view your flask app in a web browser.
-  ![Digital Ocean build screen ](images/09_deployed.png)
+12. After your deployment completes, reload the activity tab in your web browser.  The UI should display your app's URL below the app name.  Note that Digital Ocean assigned the name 'walrus-app' to this flask app.  These names are randomly assigned.
+  ![Digital Ocean activity summary screen ](images/08_app_url.png)
 `
 12. Be sure to bookmark your flask app's URL so you can find it without using the Digital Ocean web UI.
 
-13. if you need additional assistance deploying your flask app to DIgital Ocean's App Platform:
+13. if you need additional assistance deploying your flask app to Digital Ocean's App Platform:
 
-  * See [How To Deploy a Flask App Using Gunicorn to App Platform](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-app-using-gunicorn-to-app-platform) for an overview of how their flask app hosting works.
-  * Point your browser at Digital Ocean's [Support page](https://cloud.digitalocean.com/account/support) and create a support request using the 'Create a ticket' link.
+  * See Ditigal Ocean's [How To Troubleshoot Apps in App Platform](https://docs.digitalocean.com/support/how-to-troubleshoot-apps-in-app-platform/) guide.
+  * Go to Digital Ocean's [Support page](https://cloud.digitalocean.com/account/support) and create a support request using the 'Create a ticket' link.
